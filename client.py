@@ -14,13 +14,10 @@ def disconnect():
 def on_message(data):
     print(f"📨 Gelen mesaj: {data}")
 
-# SUNUCU URL'İNİ BURAYA YAZ (Render'dan alacaksın)
-SERVER_URL = "https://senin-chat.onrender.com"
+SERVER_URL = "https://urchat.onrender.com"
 
-# Sunucuya bağlan
 sio.connect(SERVER_URL)
 
-# Mesaj gönderme döngüsü
 while True:
     msg = input("Mesaj: ")
     sio.send(msg)
